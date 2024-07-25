@@ -21,7 +21,16 @@
 <body>
     <div id="content"></div>
 
-    <script src="config.js"></script>
-    <script type="module" src="script.js"></script>
+<script src="config.js"></script>
+<script type="module">
+    import { initApp } from './script.js';
+    window.addEventListener('load', () => {
+        if (typeof SUPABASE_URL !== 'undefined') {
+            initApp();
+        } else {
+            console.error('Configuration not loaded properly');
+        }
+    });
+</script>
 </body>
 </html>

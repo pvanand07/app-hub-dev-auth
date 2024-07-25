@@ -20,17 +20,9 @@
 </head>
 <body>
     <div id="content"></div>
-
-<script src="config.js"></script>
-<script type="module">
-    import { initApp } from './script.js';
-    window.addEventListener('load', () => {
-        if (typeof SUPABASE_URL !== 'undefined') {
-            initApp();
-        } else {
-            console.error('Configuration not loaded properly');
-        }
-    });
-</script>
+    <script src="config.js"></script>
+    <script src="https://esm.sh/@supabase/supabase-js@2"></script>
+    <script src="https://esm.sh/jose@4.9.2"></script>
+    <script src="script.js"></script>
 </body>
 </html>

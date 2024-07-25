@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secret Static Site</title>
+    <title>User Authentication and Validation Check</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>My Secret Message</h1>
-    <p id="secret-message"></p>
+    <div id="content"></div>
     <script src="config.js"></script>
+    <script src="https://esm.sh/@supabase/supabase-js@2"></script>
+    <script src="https://esm.sh/jose@4.9.2"></script>
     <script src="script.js"></script>
 </body>
 </html>

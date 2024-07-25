@@ -1,0 +1,19 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        env:
+          SECRET_MESSAGE: ${{ secrets.SECRET_MESSAGE }}
+        run: |
+          echo "const SECRET_MESSAGE = '$SECRET_MESSAGE';" > config.js
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .

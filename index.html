@@ -3,26 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Authentication and Validation Check</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-        iframe {
-            width: 100vw;
-            height: 100vh;
-            border: none;
-        }
-    </style>
+    <title>My Secret Page</title>
 </head>
 <body>
-    <div id="content"></div>
-    <script src="config.js"></script>
-    <script src="https://esm.sh/@supabase/supabase-js@2"></script>
-    <script src="https://esm.sh/jose@4.9.2"></script>
-    <script src="script.js"></script>
+    <h1>My Secrets</h1>
+    <p>API Key: <span id="api-key"></span></p>
+
+    <script>
+        document.getElementById('api-key').textContent = '{{MY_SECRET}}';
+    </script>
 </body>
 </html>

@@ -1,6 +1,3 @@
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
-import { jwtVerify, SignJWT } from 'https://esm.sh/jose@4.9.2'
-
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
 const content = document.getElementById('content')
 

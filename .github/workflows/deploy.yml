@@ -13,7 +13,7 @@ jobs:
       
       - name: Replace secrets
         run: |
-          sed -i 's/{{MY_SECRET}}/${{ secrets.MY_SECRET }}/g' index.html
+          sed -i 's/{{APP_URL}}/${{ secrets.APP_URL }}/g' index.html
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

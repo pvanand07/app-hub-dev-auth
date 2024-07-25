@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Secret Page</title>
+    <title>My Static Site with Secrets</title>
 </head>
 <body>
-    <h1>My Secrets</h1>
-    <p>API Key: <span id="api-key"></span></p>
-
+    <h1>My Static Site</h1>
+    <p>The secret APP_URL is: <span id="app-url"></span></p>
     <script>
-        document.getElementById('api-key').textContent = '{{APP_URL}}';
+        document.getElementById('app-url').textContent = '%%APP_URL%%';
     </script>
 </body>
 </html>
